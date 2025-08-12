@@ -76,7 +76,7 @@ const FoodSection = () => {
 ✧ _Thank you for ordering from DelishBite!_`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "8918960117";
+    const whatsappNumber = "918918960117"; // <-- UPDATED HERE
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
       "_blank"

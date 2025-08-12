@@ -34,7 +34,7 @@ export default function Home() {
     }
     const message = `✧ *New Table Booking* ✧\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Date:* ${date}\n*Time:* ${time}\n*Guests:* ${guests}\n✧ _Thank you for choosing DelishBite!_`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "8918960117";
+    const whatsappNumber = "918918960117"; // <-- UPDATED HERE
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
       "_blank"
@@ -86,7 +86,7 @@ export default function Home() {
       price * quantity
     }\n*Name:* ${name}\n*Address:* ${address}\n*Phone:* ${phone}\n*Preferred Time:* ${time}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappNumber = "8918960117";
+    const whatsappNumber = "918918960117"; // <-- UPDATED HERE
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
       "_blank"
