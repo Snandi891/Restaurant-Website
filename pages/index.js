@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const RestaurantWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -424,24 +425,30 @@ const RestaurantWebsite = () => {
             <div className="md:w-1/2 mb-16 md:mb-0">
               <div className="relative">
                 <div className="w-4/5 mx-auto transform hover:scale-105 transition-transform duration-700">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                     alt="Vegetarian dishes"
                     className="rounded-2xl shadow-2xl"
+                    width={470} // match the original image width
+                    height={350} // match the original image height
                   />
                 </div>
                 <div className="absolute -bottom-8 -left-8 w-2/5 z-10 transform hover:scale-105 transition-transform duration-700">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
                     alt="Fresh vegetables"
                     className="rounded-2xl shadow-2xl"
+                    width={448} // match the original image width
+                    height={336} // match the original image height
                   />
                 </div>
                 <div className="absolute -top-8 -right-8 w-2/5 z-10 transform hover:scale-105 transition-transform duration-700">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1481&q=80"
                     alt="Vegetarian pizza"
                     className="rounded-2xl shadow-2xl"
+                    width={448} // match the original image width
+                    height={336} // match the original image height
                   />
                 </div>
               </div>
@@ -492,9 +499,11 @@ const RestaurantWebsite = () => {
             {/* Category 1 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-48 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                   alt="Fresh Salads"
+                  width={470} // match the original image width
+                  height={350} // match the original image height
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
@@ -511,9 +520,11 @@ const RestaurantWebsite = () => {
             {/* Category 2 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-48 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                   alt="Hearty Mains"
+                  width={448} // match the original image width
+                  height={336} // match the original image height
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
@@ -530,7 +541,7 @@ const RestaurantWebsite = () => {
             {/* Category 3 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-48 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
                   alt="Decadent Desserts"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -549,7 +560,7 @@ const RestaurantWebsite = () => {
             {/* Category 4 */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-48 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                   alt="Refreshing Drinks"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -587,7 +598,7 @@ const RestaurantWebsite = () => {
             {/* Menu Item 1 */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-56 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
                   alt="Buddha Bowl"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -623,7 +634,7 @@ const RestaurantWebsite = () => {
             {/* Menu Item 2 */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-56 overflow-hidden">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                   alt="Vegetable Lasagna"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -659,10 +670,12 @@ const RestaurantWebsite = () => {
             {/* Menu Item 3 */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
               <div className="h-56 overflow-hidden">
-                <img
+                <Image
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr1YlqVTBny-j0oabcQcqh8yMF-tI2Myq38A&s"
                   alt="Vegetable Curry"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  width={448} // match the original image width
+                  height={336} // match the original image height
                 />
               </div>
               <div className="p-6">
@@ -739,10 +752,12 @@ const RestaurantWebsite = () => {
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gray-300 rounded-full mr-4 overflow-hidden shadow-md">
-                  <img
+                  <Image
                     src="https://randomuser.me/api/portraits/women/65.jpg"
                     alt="Sarah M."
-                    className="w-full h-full object-cover"
+                    width={56} // match w-14 (14*4 = 56px)
+                    height={56} // match h-14
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
                 <div>
@@ -764,7 +779,7 @@ const RestaurantWebsite = () => {
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gray-300 rounded-full mr-4 overflow-hidden shadow-md">
-                  <img
+                  <Image
                     src="https://randomuser.me/api/portraits/men/32.jpg"
                     alt="James T."
                     className="w-full h-full object-cover"
@@ -788,7 +803,7 @@ const RestaurantWebsite = () => {
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 bg-gray-300 rounded-full mr-4 overflow-hidden shadow-md">
-                  <img
+                  <Image
                     src="https://randomuser.me/api/portraits/women/28.jpg"
                     alt="Jessica L."
                     className="w-full h-full object-cover"
