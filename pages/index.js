@@ -259,9 +259,7 @@ const RestaurantWebsite = () => {
           </div>
         </div>
       </nav>
-
       {/* Hero Section */}
-
       <section
         id="home"
         className="relative h-screen rounded-b-xl flex items-center justify-center overflow-hidden"
@@ -354,7 +352,6 @@ const RestaurantWebsite = () => {
           </div>
         </div>
       </section>
-
       {/* Booking Modal */}
       {showBookingForm && (
         <div className="fixed inset-0 bg-gradient-to-b from-black/70 to-black/50 backdrop-blur-md flex justify-center items-center z-50 px-4">
@@ -420,7 +417,503 @@ const RestaurantWebsite = () => {
           </motion.div>
         </div>
       )}
+      {/* About Section */}
+      <section
+        id="about"
+        ref={(el) => (sectionsRef.current[0] = el)}
+        className="py-24 bg-gradient-to-br from-green-50 via-white to-green-100 opacity-0 transition-all duration-700"
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center">
+            {/* Image collage */}
+            <motion.div
+              className="md:w-1/2 mb-16 md:mb-0"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative">
+                <motion.div
+                  className="w-4/5 mx-auto"
+                  whileHover={{ scale: 1.05 }}
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  <Image
+                    src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1470&q=80"
+                    alt="Vegetarian dishes"
+                    className="rounded-2xl shadow-2xl"
+                    width={470}
+                    height={350}
+                  />
+                </motion.div>
 
+                <motion.div
+                  className="absolute -bottom-8 -left-8 w-2/5 z-10"
+                  whileHover={{ scale: 1.05 }}
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity }}
+                >
+                  <Image
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1480&q=80"
+                    alt="Fresh vegetables"
+                    className="rounded-2xl shadow-2xl"
+                    width={448}
+                    height={336}
+                  />
+                </motion.div>
+
+                <motion.div
+                  className="absolute -top-8 -right-8 w-2/5 z-10"
+                  whileHover={{ scale: 1.05 }}
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 6, repeat: Infinity }}
+                >
+                  <Image
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1481&q=80"
+                    alt="Vegetarian pizza"
+                    className="rounded-2xl shadow-2xl"
+                    width={448}
+                    height={336}
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Text content */}
+            <motion.div
+              className="md:w-1/2 md:pl-16"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-green-700">
+                Our Story
+              </h2>
+              <p className="text-xl mb-6 text-gray-700">
+                Founded in 2010, GreenLeaf began as a small neighborhood cafe
+                with a big vision: to make plant-based dining accessible,
+                delicious, and satisfying for everyone.
+              </p>
+              <p className="text-xl mb-8 text-gray-700">
+                Our chefs craft seasonal menus that highlight the natural
+                flavors of locally-sourced, organic produce. Every dish tells a
+                story of sustainability and culinary innovation.
+              </p>
+              <div className="flex space-x-4">
+                <motion.button
+                  whileHover={{ scale: 1.1, boxShadow: "0 0 20px #16a34a" }}
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1, boxShadow: "0 0 20px #16a34a" }}
+                  className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300"
+                >
+                  Our Team
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      ;{/* Categories Section */}
+      <section
+        id="categories"
+        ref={(el) => (sectionsRef.current[2] = el)}
+        className="py-24 bg-white opacity-0 transition-all duration-700"
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-green-700">
+            Our Specialties
+          </h2>
+          <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+            Discover our diverse range of plant-based culinary creations,
+            crafted with passion and expertise.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Category 1 */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-48 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  alt="Fresh Salads"
+                  width={470}
+                  height={350}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2 text-green-700">
+                  Fresh Salads
+                </h3>
+                <p className="text-gray-600">
+                  Crisp, vibrant salads with homemade dressings
+                </p>
+              </div>
+            </div>
+
+            {/* Category 2 */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-48 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                  alt="Hearty Mains"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2 text-green-700">
+                  Hearty Mains
+                </h3>
+                <p className="text-gray-600">
+                  Satisfying plant-based entrees for every palate
+                </p>
+              </div>
+            </div>
+
+            {/* Category 3 */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-48 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1364&q=80"
+                  alt="Decadent Desserts"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2 text-green-700">
+                  Decadent Desserts
+                </h3>
+                <p className="text-gray-600">
+                  Indulgent sweet treats without animal products
+                </p>
+              </div>
+            </div>
+
+            {/* Category 4 */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-48 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+                  alt="Refreshing Drinks"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold mb-2 text-green-700">
+                  Refreshing Drinks
+                </h3>
+                <p className="text-gray-600">
+                  Fresh juices, smoothies, and specialty beverages
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      ;{/* Menu Preview Section */}
+      <section
+        id="menu"
+        ref={(el) => (sectionsRef.current[3] = el)}
+        className="py-24 bg-gray-50 opacity-0 transition-all duration-700"
+      >
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-green-700">
+            Signature Dishes
+          </h2>
+          <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+            Discover our chef&apos;s carefully crafted plant-based creations
+            that celebrate the seasons.
+          </p>
+
+          {/* Grid of Menu Items */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Menu Item 1 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-56 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80"
+                  alt="Harvest Buddha Bowl"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-2xl font-bold">Harvest Buddha Bowl</h3>
+                  <span className="text-green-600 font-bold text-xl">$16</span>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Quinoa, roasted sweet potatoes, avocado, kale, and tahini
+                  dressing
+                </p>
+                <button className="text-green-600 font-semibold flex items-center group-hover:text-green-700 transition-colors">
+                  Add to order
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Menu Item 2 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-56 overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                  alt="Mushroom Lasagna"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-2xl font-bold">Mushroom Lasagna</h3>
+                  <span className="text-green-600 font-bold text-xl">$18</span>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Layers of pasta, cashew ricotta, seasonal mushrooms, and
+                  marinara
+                </p>
+                <button className="text-green-600 font-semibold flex items-center group-hover:text-green-700 transition-colors">
+                  Add to order
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Menu Item 3 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+              <div className="h-56 overflow-hidden relative">
+                <Image
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr1YlqVTBny-j0oabcQcqh8yMF-tI2Myq38A&s"
+                  alt="Coconut Curry"
+                  width={448}
+                  height={336}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-2xl font-bold">Coconut Curry</h3>
+                  <span className="text-green-600 font-bold text-xl">$17</span>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Seasonal vegetables in aromatic coconut curry with jasmine
+                  rice
+                </p>
+                <button className="text-green-600 font-semibold flex items-center group-hover:text-green-700 transition-colors">
+                  Add to order
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center mx-auto">
+              View Full Menu
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 ml-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      ;{/* Testimonials */}
+      <section
+        ref={(el) => (sectionsRef.current[4] = el)}
+        className="py-24 bg-green-50 opacity-0 transition-all duration-700"
+      >
+        <div className="container mx-auto px-4">
+          {/* Section Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-green-700">
+            What Our Guests Say
+          </h2>
+          <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+            Don&apos;t just take our word for it — hear from our satisfied
+            customers.
+          </p>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              {/* Stars */}
+              <div className="flex mb-6 text-yellow-400">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <svg
+                      key={i}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      className="h-6 w-6"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+              </div>
+              {/* Quote */}
+              <p className="text-gray-600 mb-6 text-lg italic leading-relaxed">
+                &quot;The flavors in every dish are incredible! I&apos;m not
+                vegetarian but I eat here regularly because the food is just
+                that good.&quot;
+              </p>
+              {/* Profile */}
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gray-200 rounded-full mr-4 overflow-hidden shadow-md">
+                  <Image
+                    src="https://randomuser.me/api/portraits/women/65.jpg"
+                    alt="Sarah M."
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">Sarah M.</h4>
+                  <p className="text-green-600">Regular Guest</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex mb-6 text-yellow-400">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <svg
+                      key={i}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      className="h-6 w-6"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+              </div>
+              <p className="text-gray-600 mb-6 text-lg italic leading-relaxed">
+                &quot;As a long-time vegetarian, it&apos;s refreshing to find a
+                restaurant that creates innovative dishes that even my
+                meat-eating friends love.&quot;
+              </p>
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gray-200 rounded-full mr-4 overflow-hidden shadow-md">
+                  <Image
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="James T."
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">James T.</h4>
+                  <p className="text-green-600">Food Blogger</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex mb-6 text-yellow-400">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <svg
+                      key={i}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      className="h-6 w-6"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+              </div>
+              <p className="text-gray-600 mb-6 text-lg italic leading-relaxed">
+                &quot;The atmosphere is perfect for a date night, and the staff
+                is incredibly knowledgeable about the ingredients in each
+                dish.&quot;
+              </p>
+              <div className="flex items-center">
+                <div className="w-14 h-14 bg-gray-200 rounded-full mr-4 overflow-hidden shadow-md">
+                  <Image
+                    src="https://randomuser.me/api/portraits/women/28.jpg"
+                    alt="Jessica L."
+                    width={56}
+                    height={56}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">Jessica L.</h4>
+                  <p className="text-green-600">First-time Visitor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <section id="contact" ref={(el) => (sectionsRef.current[6] = el)}>
         <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -568,7 +1061,6 @@ const RestaurantWebsite = () => {
           </div>
         </footer>
       </section>
-
       {/* Custom CSS for animations */}
       <style jsx>{`
         @keyframes fadeInDown {

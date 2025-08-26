@@ -3,8 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      "images.unsplash.com", // Unsplash images
-      "randomuser.me", // Random User API
+      "randomuser.me",
+      "images.unsplash.com",
+      "encrypted-tbn0.gstatic.com", // 👈 Add this
     ],
   },
 };
