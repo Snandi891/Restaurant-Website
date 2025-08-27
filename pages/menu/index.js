@@ -511,10 +511,12 @@ const MenuPage = () => {
       <section className="relative py-16 md:py-24 bg-green-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://media.istockphoto.com/id/1127560680/photo/indian-food-curry-butter-chicken-palak-paneer-chiken-tikka-biryani-vegetable-curry-papad-dal.jpg?b=1&s=612x612&w=0&k=20&c=e01oyW3I8Fllh0RpU90HIBwGz9rKaUa2MjSSLeTy7gU="
             alt="Restaurant interior"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
           />
         </div>
 
@@ -586,10 +588,11 @@ const MenuPage = () => {
                 >
                   <div className="relative">
                     <div className="h-48 bg-gray-200 overflow-hidden relative">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover rounded-lg"
                       />
                       <div className="w-full h-full bg-gradient-to-t from-black/30 to-transparent opacity-70 absolute"></div>
                       {item.popular && (
