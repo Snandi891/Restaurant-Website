@@ -5,7 +5,8 @@ const nextConfig = {
     domains: [
       "randomuser.me",
       "images.unsplash.com",
-      "encrypted-tbn0.gstatic.com", // 👈 Add this
+      "encrypted-tbn0.gstatic.com",
+      "www.maggi.lk", // add any other host you need
     ],
   },
 };
