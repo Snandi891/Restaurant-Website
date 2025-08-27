@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const RestaurantWebsite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -391,7 +392,7 @@ const RestaurantWebsite = () => {
               </button>
 
               {/* View Menu Button */}
-              <a href="/menu">
+              <Link href="/menu">
                 <button className="relative overflow-hidden group border-2 border-teal-500 text-teal-600 font-bold py-4 sm:py-5 px-8 sm:px-12 rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-xl hover:shadow-teal-500/40">
                   <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-green-500 w-0 transition-all duration-500 group-hover:w-full -z-10"></span>
                   <span className="absolute inset-0 rounded-full bg-white/20 scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-100 transition-all duration-700"></span>
@@ -413,7 +414,7 @@ const RestaurantWebsite = () => {
                     </svg>
                   </span>
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -581,13 +582,13 @@ const RestaurantWebsite = () => {
                 Our Story
               </h2>
               <p className="text-xl mb-6 text-gray-700">
-                As of now, there doesn't appear to be a restaurant named
+                As of now, there doesnot appear to be a restaurant named
                 Nityananda Prasadam located in Saktinagar, Krishnanagar.
                 However, there are several vegetarian-friendly establishments in
                 the vicinity that offer quality meals.
               </p>
               <p className="text-xl mb-8 text-gray-700">
-                The restaurant's ambiance reflects its spiritual roots, with
+                The restaurants ambiance reflects its spiritual roots, with
                 simple yet elegant decor that creates a serene dining
                 environment. The focus is on providing a peaceful space where
                 patrons can enjoy their meals mindfully and with gratitude.
@@ -603,7 +604,7 @@ const RestaurantWebsite = () => {
             Our Specialties
           </h2>
           <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-            Here’s a concise version for Nityananda Prasadam restaurant
+            Here is a concise version for Nityananda Prasadam restaurant
             categories (veg items)
           </p>
 
@@ -685,7 +686,7 @@ const RestaurantWebsite = () => {
 
           {/* View All Menu Button */}
           <div className="text-center mt-16">
-            <a href="/menu">
+            <Link href="/menu">
               <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center mx-auto">
                 View All Menu
                 <svg
@@ -701,7 +702,7 @@ const RestaurantWebsite = () => {
                   />
                 </svg>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
