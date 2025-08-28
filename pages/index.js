@@ -355,10 +355,11 @@ const RestaurantWebsite = () => {
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 z-10 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 drop-shadow-[0_0_15px_rgba(255,200,50,0.7)] [text-stroke:1px_black]">
             Nityananda Prasadam
           </h1>
-          <p className="text-xl md:text-3xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-300">
+
+          <p className="text-xl md:text-3xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-300 text-shadow-black drop-shadow-[0_0_10px_rgba(34,211,238,0.6)] [text-stroke:0.5px_black]">
             Experience the art of plant-based dining in an elegant atmosphere
           </p>
 
@@ -488,18 +489,21 @@ const RestaurantWebsite = () => {
                 onChange={handleBookingChange}
                 className="w-full mb-6 p-3 rounded bg-white/10 border border-white/30 text-black"
               />
-              <div className="flex gap-3">
+              <div className="flex gap-20 justify-center">
+                {/* Order Now Button */}
                 <button
                   onClick={sendBookingWhatsApp}
-                  className="flex-1 bg-gradient-to-r from-green-400 to-green-600 text-white px-4 py-2 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-green-500 hover:to-green-700"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white font-semibold shadow-lg hover:shadow-green-400 hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse-glow"
                 >
-                  order Now
+                  Order Now
                 </button>
+
+                {/* Cancel Button */}
                 <button
                   onClick={handleBookingCancel}
-                  className="flex-1 bg-gradient-to-r from-red-400 to-red-600 text-white px-4 py-2 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:from-red-500 hover:to-red-700"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gray-200 to-gray-400 text-gray-800 font-semibold shadow-md hover:from-gray-300 hover:to-gray-500 hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
-                  Cancel
+                  ✖ Cancel
                 </button>
               </div>
             </motion.div>
@@ -762,19 +766,24 @@ const RestaurantWebsite = () => {
                 ></textarea>
 
                 <div className="flex justify-between mt-6">
-                  <button
-                    type="button"
-                    onClick={handleClose}
-                    className="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400 transition"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
-                  >
-                    Send to WhatsApp
-                  </button>
+                  <div className="flex gap-3">
+                    {/* Cancel Button */}
+                    <button
+                      type="button"
+                      onClick={handleClose}
+                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gray-200 to-gray-400 text-gray-800 font-semibold shadow-md hover:from-gray-300 hover:to-gray-500 hover:shadow-lg active:scale-95 transition-all duration-300"
+                    >
+                      ✖ Cancel
+                    </button>
+
+                    {/* WhatsApp Button */}
+                    <button
+                      type="submit"
+                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white font-semibold shadow-lg hover:shadow-green-400 hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse-glow"
+                    >
+                      Order Now
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -979,6 +988,24 @@ const RestaurantWebsite = () => {
 
         .delay-500 {
           animation-delay: 0.5s;
+        }
+
+        @keyframes pulse-glow {
+          0% {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.6),
+              0 0 20px rgba(34, 197, 94, 0.5);
+          }
+          50% {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.8),
+              0 0 40px rgba(34, 197, 94, 0.6);
+          }
+          100% {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.6),
+              0 0 20px rgba(34, 197, 94, 0.5);
+          }
+        }
+        .animate-pulse-glow {
+          animation: pulse-glow 2s infinite;
         }
       `}</style>
     </div>

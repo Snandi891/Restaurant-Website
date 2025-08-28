@@ -651,7 +651,7 @@ const MenuPage = () => {
                             d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                           />
                         </svg>
-                        Order via WhatsApp
+                        Order Now
                       </button>
                     </div>
                   </div>
@@ -708,13 +708,13 @@ const MenuPage = () => {
               <div className="flex justify-end gap-3">
                 <button
                   onClick={() => setWhatsAppModal(false)}
-                  className="px-5 py-2 rounded-full border hover:bg-gray-100 transition font-medium"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gray-200 to-gray-400 text-gray-800 font-semibold shadow-md hover:from-gray-300 hover:to-gray-500 hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={sendWhatsApp}
-                  className="px-5 py-2 rounded-full bg-green-600 text-white hover:bg-green-700 transition font-medium"
+                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white font-semibold shadow-lg hover:shadow-green-400 hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse-glow"
                 >
                   Send
                 </button>
